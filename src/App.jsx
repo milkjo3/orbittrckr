@@ -1,5 +1,5 @@
 import Globe from "./components/Globe"
-import NeoWList from "./components/NeoWList"
+import NeoWList from "./components/NeoFeedList"
 import Clock from "./components/Clock";
 export default function App() {
   return (
