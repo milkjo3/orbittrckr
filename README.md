@@ -13,9 +13,9 @@ A React-based web application that utilizes the power of three.js to visualize N
 
 ## Features
 
-Current Iteration; v.0.9.21.25
+Current Iteration; v.0.9.23.25
 
-![Alt text](public/images/v.0.9.21.25.png)
+![Alt text](public/images/v.0.9.23.25.png)
 
 - NASA NeoW API Calls to gather NEOs through a certain timeframe
 - Integrated three.js to visualize Earth orbiting around
