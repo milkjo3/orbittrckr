@@ -15,5 +15,6 @@ export const fetchNeos = async (page = 0, size =20) => {
         throw new Error('Failed to fetch NEOs.');
     }
     const data = await response.json();
+    
     return data.near_earth_objects;
 };

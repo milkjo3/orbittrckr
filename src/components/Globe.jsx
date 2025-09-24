@@ -26,10 +26,10 @@ export default function  Globe(){
         const loader = new THREE.TextureLoader();
         const earthTexture = loader.load("/textures/earth_september.jpg")
 
-        // const spaceTexture = loader.load("public/textures/stars.jpg");
-        // scene.background = spaceTexture;
+        const spaceTexture = loader.load("/textures/stars3.jpg");
+        scene.background = spaceTexture;
 
-        const geometry = new THREE.SphereGeometry( 5, 32, 32 ); 
+        const geometry = new THREE.SphereGeometry( 5, 48, 48 ); 
         const material = new THREE.MeshBasicMaterial( { map: earthTexture } ); 
         const sphere = new THREE.Mesh( geometry, material ); 
 
@@ -41,15 +41,14 @@ export default function  Globe(){
         pointLight.position.set(10, 10, 10);
         scene.add(pointLight);
 
-        // const controls = new OrbitControls(camera, renderer.domElement);
-        // controls.enableDamping = true;
-        // controls.dampingFactor = 0.05;
-        // controls.minDistance = 1.5;
-        // controls.maxDistance = 10;
-        // controls.autoRotate = false;
-        // controls.autoRotateSpeed = 0.5;
-    
-
+        const controls = new OrbitControls(camera, renderer.domElement);
+        controls.enableDamping = true;
+        controls.dampingFactor = 0.05;
+        controls.minDistance = 10;
+        controls.maxDistance = 25;
+        controls.autoRotate = true;
+        controls.autoRotateSpeed = 1.5;
+        
         camera.position.z = 20;
 
         const handleResize = () => {
@@ -65,8 +64,8 @@ export default function  Globe(){
 
         const animate = () => {
             requestAnimationFrame(animate);
-            sphere.rotation.y += 0.0009;
             renderer.render(scene, camera);
+            controls.update();
         };
         animate();
 
