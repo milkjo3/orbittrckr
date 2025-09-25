@@ -15,7 +15,6 @@ const NeoFeedList = () => {
 
     return (
         <div>
-            <h2>Near-Earth Objects</h2>
             <ul>
                 {neos.map(neo => (
                     <li key={neo.id}>

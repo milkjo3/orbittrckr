@@ -8,7 +8,7 @@ import { fetchNeos } from "../api/nasaNeoFeed";
  * @param {number} size - Number of items per page (default 20)
  * @returns {Object} { neos, loading, error }
 */
-const useNeoFeed = (page = 0, size = 20) => {
+const useNeoFeed = (page = 0, size = 15) => {
     const [neos, setNeos] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);

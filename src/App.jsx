@@ -15,7 +15,14 @@ export default function App() {
           {/* Navigation */}
           <nav className="flex text-center space-x-8">
             <a href="#home" className="text-gray-300 hover:text-white transition-colors duration-200 font-medium no-underline">
+              Home
+            </a>
+
+            <a href="#home" className="text-gray-300 hover:text-white transition-colors duration-200 font-medium no-underline">
               About
+            </a>
+            <a href="#home" className="text-gray-300 hover:text-white transition-colors duration-200 font-medium no-underline">
+              Contact
             </a>
           </nav>
 
@@ -28,7 +35,7 @@ export default function App() {
 
       {/* Main Content */}
       <main className="flex flex-1 w-full">
-        <section className="flex-1 flex items-center justify-center border-r border-gray-700">
+        <section className="flex-1 flex items-center justify-center border-r border-radius 20px border-gray-700">
           <Globe/>
         </section>
 
