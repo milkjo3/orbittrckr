@@ -1,7 +1,9 @@
 import Globe from "./components/Globe"
 import NeoWList from "./components/NeoFeedList"
 import Clock from "./components/Clock";
+import useRotatingTitle from "./hooks/useRotatingTitle";
 export default function App() {
+  useRotatingTitle("OrbitTrckr | NASA Near-Earth Orbit Tracker", 500);
   return (
     <div className="flex flex-col h-screen bg-gray-900 text-white w-full">
       {/*Header*/}
@@ -27,7 +29,7 @@ export default function App() {
           </nav>
 
           {/* Clock */}
-          <div className="flex items-center space-x-2">
+          <div className="p-2 bg-gray-700 rounded-lg flex items-center space-x-2">
             <Clock />
           </div>
         </div>
@@ -35,6 +37,8 @@ export default function App() {
 
       {/* Main Content */}
       <main className="flex flex-1 w-full">
+        <aside className="w-20 bg-gray-800"></aside>
+        
         <section className="flex-1 flex items-center justify-center border-r border-radius 20px border-gray-700">
           <Globe/>
         </section>
@@ -52,15 +56,16 @@ export default function App() {
             <h2 className="text-lg font-semibold mb-2">
               Upcoming flybys
             </h2>
-            <div className="flex gap-4">
               <NeoWList/>
-            </div>
           </div>
         </aside>
+
       </main>
 
-      <footer className="p-4 bg-gray-800 border-t border-gray-700 text-center text-gray-400 w-full">  
+      <footer className="p-4 bg-gray-800 border-t border-gray-700 text-gray-400 text-center w-full">  
+        <a href="https://www.github.com/milkjo3" className="hover:text-white transition-colors duration-200">
         @github.com/milkjo3, 2025 All Rights Reserved.
+        </a>
       </footer>  
     </div>    
   );

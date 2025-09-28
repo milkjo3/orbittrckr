@@ -75,5 +75,5 @@ export default function  Globe(){
 
     }, []);
 
-    return <div ref={mountRef} className="w-full h-full"/>;
+    return <div ref={mountRef} className="w-full h-auto min-h-screen rounded-md"/>;
 };

@@ -13,7 +13,7 @@ function Clock () {
     }, []);
 
     return (
-        <span className="font-mono text-lg text-gray-300 ml-4">
+        <span className="font-mono text-lg text-gray-300">
             {time.toLocaleTimeString("en-US", { timeZone: "UTC"})} UTC
         </span>
     );

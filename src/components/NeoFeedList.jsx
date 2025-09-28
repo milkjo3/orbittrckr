@@ -14,7 +14,7 @@ const NeoFeedList = () => {
     if (error) return <p>Error: {error.message}</p>;
 
     return (
-        <div>
+        <div className="p-4 bg-gray-800 rounded-lg">
             <ul>
                 {neos.map(neo => (
                     <li key={neo.id}>
